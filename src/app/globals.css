@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+:root {
+  --background: #000000;
+  --foreground: #ffffff;
+  --card: #1a1a1a;
+  --card-foreground: #ffffff;
+  --primary: #ffffff;
+  --primary-foreground: #000000;
+  --secondary: #404040;
+  --secondary-foreground: #ffffff;
+  --muted: #262626;
+  --muted-foreground: #a3a3a3;
+  --accent: #404040;
+  --accent-foreground: #ffffff;
+  --border: #404040;
+  --ring: #ffffff;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: system-ui, -apple-system, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  border-color: var(--border);
+}
+
+/* 모바일 기본 스타일 */
+@media (max-width: 640px) {
+  body {
+    font-size: 14px;
+  }
+  
+  /* 터치 친화적인 버튼 크기 */
+  button {
+    min-height: 44px;
+    touch-action: manipulation;
+  }
+  
+  /* 입력 필드 크기 조정 */
+  input, textarea {
+    font-size: 16px; /* iOS 줌 방지 */
+  }
+}
+
+/* 태블릿 스타일 */
+@media (min-width: 641px) and (max-width: 1024px) {
+  body {
+    font-size: 15px;
+  }
+  
+  /* 태블릿에서 터치 친화적인 요소 크기 */
+  button {
+    min-height: 40px;
+  }
+  
+  /* 태블릿에서 적절한 간격 */
+  .tablet-spacing {
+    padding: 1rem 1.5rem;
+  }
+}
